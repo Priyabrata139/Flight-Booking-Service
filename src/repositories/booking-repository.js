@@ -4,6 +4,7 @@ const { Op } = require("sequelize");
 const { Booking } = require('../models');
 const CrudRepository = require('./crud-repository');
 const {Enums} = require('../utils/common');
+const AppError = require('../utils/errors/app-error');
 const { CANCELLED, BOOKED } = Enums.BOOKING_STATUS;
 
 class BookingRepository extends CrudRepository {
